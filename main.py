@@ -64,9 +64,6 @@ def draw_menu(last_score, high_score):
         text_last_score = font.render(f"Last Score: {last_score}", True, WHITE)
         screen.blit(text_last_score, (WIDTH // 2 - text_last_score.get_width() // 2, HEIGHT // 2 + 180))
 
-    if high_score is not None:
-        text_high_score = font.render(f"High Score: {high_score}", True, WHITE)
-        screen.blit(text_high_score, (WIDTH // 2 - text_high_score.get_width() // 2, HEIGHT // 2 + 210))
 
 def game_over(score, high_score):
     while True:
@@ -97,7 +94,7 @@ def main_menu():
 
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_BACKQUOTE:
 
-                webbrowser.open("https://your-tutorial-link.com")
+                webbrowser.open("https://raw.githubusercontent.com/pycharmertutor/pyshoter/main/tutorial")
 
         screen.fill((0, 0, 0))
         draw_menu(last_score, high_score)
